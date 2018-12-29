@@ -111,6 +111,11 @@
 
 @endsection
 
+@section('add_css')
+<!-- Morris Charts CSS -->
+<link href="{{ asset('vendor/morrisjs/morris.css')}}" rel="stylesheet">
+
+@endsection
 
 @section('add_js')
 

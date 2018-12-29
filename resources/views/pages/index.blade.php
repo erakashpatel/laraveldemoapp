@@ -542,3 +542,22 @@
 <!-- /.row -->
 
 @endsection
+
+
+@section('add_css')
+<!-- Morris Charts CSS -->
+<link href="{{ asset('vendor/morrisjs/morris.css')}}" rel="stylesheet">
+
+@endsection
+
+@section('add_js')
+
+<!-- Morris Charts JavaScript -->
+<script src="{{ asset('vendor/raphael/raphael.min.js')}}"></script>
+<script src="{{ asset('vendor/morrisjs/morris.min.js')}}"></script>
+<script src="{{ asset('data/morris-data.js')}}"></script>
+<!-- Custom Theme JavaScript -->
+<script src="{{ asset('dist/js/sb-admin-2.js')}}"></script>
+
+
+@endsection
