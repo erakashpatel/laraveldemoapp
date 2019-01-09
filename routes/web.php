@@ -18,7 +18,12 @@ Route::get('/', function () {
 
 Route::prefix('admin')->group(function () {
     Route::get('/', function () {
-        return view('pages.index');
+        if($user = Auth::user()){
+            return view('pages.index');
+        }else{
+            return view('customauth.login');
+        }
+        //
     })->name('admin.index');
     
     Route::get('/tables', function () {
@@ -76,3 +81,6 @@ Route::prefix('admin')->group(function () {
     
 
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
